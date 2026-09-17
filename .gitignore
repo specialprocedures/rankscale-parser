@@ -1,1 +1,6 @@
-redmeat_v2.csv
+*.csv
+__pycache__/
+*.egg-info/
+build/
+dist/
+.venv/

@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rankscale-parser"
+version = "0.1.0"
+description = "Parse Rankscale exports into queries, responses, citations and domains tables."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas",
+    "tldextract>=5.0",
+    "weightipy",
+]
+
+[project.scripts]
+rankscale-parser = "rankscale_parser:main"
+
+[tool.setuptools]
+py-modules = ["rankscale_parser"]
