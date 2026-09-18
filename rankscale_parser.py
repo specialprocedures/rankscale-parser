@@ -238,7 +238,7 @@ def main(argv=None):
     domains = make_domains_table(citations, df)
 
     queries = df[["query_id"] + QUERY_COLS + AI_COLS].drop_duplicates("query_id")
-    responses = df[["response_id"] + RESPONSE_COLS]
+    responses = df[["response_id", "query_id"] + RESPONSE_COLS]
 
     # Write to csv
     for write_df, name in [
